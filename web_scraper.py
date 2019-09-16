@@ -12,8 +12,10 @@ file = open('kea.html','a+')
 file.write(print_str)
 file.close()
 
+git_commit = input("enter commit comment: ")
+
 subprocess.run(["git","add" , "."])
-subprocess.run(["git","commit", "-m", "\"First commit\""])
+subprocess.run(["git","commit", "-m", "" + git_commit + ""])
 subprocess.run(["git","push"])
 
 
